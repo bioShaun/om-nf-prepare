@@ -263,8 +263,8 @@ process make_config {
         fasta = \'${fasta_path}/${fasta.getName()}\'
         gtf = \'${gtf_path}/${gtf.getName()}\'
         bwa_index = \'${outdir}/bwa/\'
-        exon_bed = \'${outdir}/${gtf.baseName}.exon.bed\'
-        cds_bed = \'${outdir}/${gtf.baseName}.cds.bed\'
+        exon_bed = \'${outdir}/${gtf.baseName}.exon.merged.bed\'
+        cds_bed = \'${outdir}/${gtf.baseName}.cds.merged.bed\'
         exon_split_bed = \'${outdir}/split_bed/exon\'
         genome_split_bed = \'${outdir}/split_bed/genome\'
     }
