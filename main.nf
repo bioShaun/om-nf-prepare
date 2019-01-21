@@ -138,7 +138,7 @@ if (!samtools_idx.exists()) {
 
 
 //Prepare picard index
-picard_idx = file("${fasta_file}.dict")
+picard_idx = file("${fasta_path}/${fasta_file.baseName}.dict")
 if (!picard_idx.exists()) {
     process picard_index {
         tag "Build picard fasta index on ${fasta_file.getName()}"
@@ -354,7 +354,7 @@ if (params.reseq) {
         file bwa_idx from bwa_idx
 
         output:
-        file "${cfg_name}.nf.config"
+        file "${cfg_name}.reseq.nf.config"
 
         script:
         """
